@@ -1,0 +1,44 @@
+{
+	"schemaVersion": 1,
+	"id": "sorcery-craft",
+	"version": "${version}",
+	"name": "sorcery craft",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/sorcery-craft/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.goat.SorceryCraft"
+		],
+		"client": [
+			"com.goat.SorceryCraftClient"
+		],
+		"fabric-datagen": [
+			"com.goat.SorceryCraftDataGenerator"
+		]
+	},
+	"mixins": [
+		"sorcery-craft.mixins.json",
+		{
+			"config": "sorcery-craft.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.6",
+		"minecraft": "~1.19.2",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
